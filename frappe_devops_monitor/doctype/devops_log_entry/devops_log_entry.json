@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "timestamp",
+  "log_type",
+  "log_level",
+  "source",
+  "message",
+  "details"
+ ],
+ "fields": [
+  {
+   "fieldname": "timestamp",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Timestamp",
+   "reqd": 1
+  },
+  {
+   "fieldname": "log_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Log Type",
+   "options": "Frappe\nNginx\nSupervisor\nSystem\nDatabase\nError",
+   "reqd": 1
+  },
+  {
+   "fieldname": "log_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Log Level",
+   "options": "DEBUG\nINFO\nWARNING\nERROR\nCRITICAL"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Source"
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Message",
+   "reqd": 1
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Code",
+   "label": "Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Frappe DevOps Monitor",
+ "name": "DevOps Log Entry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "DevOps Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "DevOps Viewer"
+  }
+ ],
+ "sort_field": "timestamp",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "message",
+ "track_changes": 1
+}

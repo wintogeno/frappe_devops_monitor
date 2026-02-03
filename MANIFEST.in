@@ -1,0 +1,17 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+recursive-include frappe_devops_monitor *.css
+recursive-include frappe_devops_monitor *.csv
+recursive-include frappe_devops_monitor *.html
+recursive-include frappe_devops_monitor *.ico
+recursive-include frappe_devops_monitor *.js
+recursive-include frappe_devops_monitor *.json
+recursive-include frappe_devops_monitor *.md
+recursive-include frappe_devops_monitor *.png
+recursive-include frappe_devops_monitor *.py
+recursive-include frappe_devops_monitor *.svg
+recursive-include frappe_devops_monitor *.txt
+recursive-exclude frappe_devops_monitor *.pyc

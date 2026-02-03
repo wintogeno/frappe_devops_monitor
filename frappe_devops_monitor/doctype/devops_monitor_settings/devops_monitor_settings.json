@@ -1,0 +1,182 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:site_name",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "site_name",
+  "enable_monitoring",
+  "section_break_logs",
+  "frappe_log_path",
+  "nginx_log_path",
+  "supervisor_log_path",
+  "system_log_path",
+  "column_break_logs",
+  "max_log_lines",
+  "log_retention_days",
+  "section_break_alerts",
+  "enable_alerts",
+  "alert_recipients",
+  "section_break_thresholds",
+  "cpu_threshold",
+  "memory_threshold",
+  "disk_threshold",
+  "column_break_thresholds",
+  "error_rate_threshold",
+  "slow_query_threshold"
+ ],
+ "fields": [
+  {
+   "fieldname": "site_name",
+   "fieldtype": "Data",
+   "label": "Site Name",
+   "unique": 1,
+   "read_only": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_monitoring",
+   "fieldtype": "Check",
+   "label": "Enable Monitoring"
+  },
+  {
+   "fieldname": "section_break_logs",
+   "fieldtype": "Section Break",
+   "label": "Log Configuration"
+  },
+  {
+   "default": "~/frappe-bench/logs",
+   "fieldname": "frappe_log_path",
+   "fieldtype": "Data",
+   "label": "Frappe Log Path"
+  },
+  {
+   "default": "/var/log/nginx",
+   "fieldname": "nginx_log_path",
+   "fieldtype": "Data",
+   "label": "Nginx Log Path"
+  },
+  {
+   "default": "/var/log/supervisor",
+   "fieldname": "supervisor_log_path",
+   "fieldtype": "Data",
+   "label": "Supervisor Log Path"
+  },
+  {
+   "default": "/var/log",
+   "fieldname": "system_log_path",
+   "fieldtype": "Data",
+   "label": "System Log Path"
+  },
+  {
+   "fieldname": "column_break_logs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1000",
+   "fieldname": "max_log_lines",
+   "fieldtype": "Int",
+   "label": "Max Log Lines to Display"
+  },
+  {
+   "default": "30",
+   "fieldname": "log_retention_days",
+   "fieldtype": "Int",
+   "label": "Log Retention (Days)"
+  },
+  {
+   "fieldname": "section_break_alerts",
+   "fieldtype": "Section Break",
+   "label": "Alert Configuration"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_alerts",
+   "fieldtype": "Check",
+   "label": "Enable Alerts"
+  },
+  {
+   "fieldname": "alert_recipients",
+   "fieldtype": "Table",
+   "label": "Alert Recipients",
+   "options": "DevOps Alert Recipient"
+  },
+  {
+   "fieldname": "section_break_thresholds",
+   "fieldtype": "Section Break",
+   "label": "Alert Thresholds"
+  },
+  {
+   "default": "80",
+   "fieldname": "cpu_threshold",
+   "fieldtype": "Int",
+   "label": "CPU Threshold (%)"
+  },
+  {
+   "default": "85",
+   "fieldname": "memory_threshold",
+   "fieldtype": "Int",
+   "label": "Memory Threshold (%)"
+  },
+  {
+   "default": "90",
+   "fieldname": "disk_threshold",
+   "fieldtype": "Int",
+   "label": "Disk Threshold (%)"
+  },
+  {
+   "fieldname": "column_break_thresholds",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "10",
+   "fieldname": "error_rate_threshold",
+   "fieldtype": "Int",
+   "label": "Error Rate Threshold (per min)"
+  },
+  {
+   "default": "1000",
+   "fieldname": "slow_query_threshold",
+   "fieldtype": "Int",
+   "label": "Slow Query Threshold (ms)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Frappe DevOps Monitor",
+ "name": "DevOps Monitor Settings",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "DevOps Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
